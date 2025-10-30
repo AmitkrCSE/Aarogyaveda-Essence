@@ -1,0 +1,381 @@
+/* 🌿 AYURVEDA WEBSITE — FULL RESPONSIVE CSS */
+
+/* ---------- Base Styling ---------- */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  background: #f0fff4;
+  color: #333;
+}
+
+/* ---------- Sidebar ---------- */
+#sidebar {
+  width: 250px;
+  background: linear-gradient(180deg, #05f92a, #1207e2);
+  color: white;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 20px 15px;
+  box-shadow: 3px 0 10px rgba(0,0,0,0.2);
+  overflow-y: auto;
+  z-index: 10;
+}
+
+.logo img {
+  width: 150px;
+  animation: rotateOm 5s linear infinite;
+}
+
+@keyframes rotateOm {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin-bottom: auto;
+}
+
+.sidebar-menu li { margin: 20px 0; }
+
+.sidebar-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1em;
+  transition: all 0.3s;
+}
+
+.sidebar-menu a:hover {
+  color: #a5d6a7;
+  transform: translateX(10px);
+}
+
+/* Account Button */
+.account-bottom {
+  position: sticky;
+  bottom: 10px;
+  background: #fffbe8;
+  padding: 15px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+  animation: glow 3s infinite alternate;
+}
+
+@keyframes glow {
+  from { box-shadow: 0 0 10px rgba(255,215,0,0.3); }
+  to { box-shadow: 0 0 20px rgba(255,215,0,0.7); }
+}
+
+#account-btn-sidebar {
+  background: #ffd700;
+  color: #165a1d;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+#account-btn-sidebar:hover {
+  background: rgb(255, 255, 255);
+  color: #165a1d;
+  box-shadow: 0 0 15px #ffd700;
+}
+
+/* ---------- Main Content ---------- */
+#main-content {
+  margin-left: 260px;
+  padding: 20px;
+}
+
+/* ---------- Hero Section ---------- */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #c8e6c9, #f1f8e9);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 2s ease;
+}
+
+.hero-text {
+  max-width: 50%;
+}
+
+.hero-text h2 span {
+  color: #2e7d32;
+}
+
+.explore-btn {
+  background: #2e7d32;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.explore-btn:hover {
+  background: #1b5e20;
+  transform: scale(1.05);
+}
+
+.hero-img img {
+  width: 380px;
+  border-radius: 20px;
+  transition: transform 0.6s;
+}
+
+.hero-img img:hover {
+  transform: scale(1.05) rotateY(10deg);
+}
+
+/* ---------- About Section ---------- */
+.about-section {
+  padding: 70px 10%;
+  background: #fffef5;
+  animation: slideUp 1.8s ease;
+}
+.about-section h2 {
+  text-align: center;
+  color: #1e8449;
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  position: relative;
+}
+.about-section h2::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: #ffd700;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 3px;
+}
+.about-section h3 {
+  color: #1e8449;
+  margin-top: 50px;
+  font-size: 1.7rem;
+}
+.about-section p {
+  font-size: 1.1rem;
+  text-align: justify;
+}
+.image-block {
+  text-align: center;
+  margin: 40px 0;
+}
+.image-block img {
+  width: 70%;
+  max-width: 800px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  transition: transform 0.5s ease;
+}
+.image-block img:hover {
+  transform: scale(1.03);
+}
+
+/* ---------- Herbs Section ---------- */
+.herbs-section {
+  margin-top: 40px;
+  text-align: center;
+}
+
+#herbSearch {
+  width: 80%;
+  padding: 30px;
+  border-radius: 50px;
+  border: 2px solid #66bb6a;
+}
+
+.herb-results {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.herb-card {
+  background: #a5d6a7;
+  margin: 10px;
+  padding: 15px;
+  border-radius: 15px;
+  width: 200px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.herb-card:hover {
+  transform: scale(1.05);
+}
+
+/* ---------- Quiz Section ---------- */
+.quiz-section {
+  margin: 60px auto;
+  background: linear-gradient(135deg, #e8f5e9, #c8e6c9, #a5d6a7);
+  padding: 50px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  transition: all 0.6s ease;
+  max-width: 800px;
+  overflow: hidden;
+}
+
+.quiz-section h2 {
+  font-size: 2.5rem;
+  color: #1b5e20;
+  text-shadow: 0 0 15px #a5d6a7;
+}
+
+/* ---------- Blog Section ---------- */
+.blog-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.blog-card {
+  width: 300px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  margin: 15px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.blog-card:hover {
+  transform: scale(1.05);
+}
+
+.blog-card img {
+  width: 100%;
+  height: 180px;
+}
+
+/* ---------- Tips ---------- */
+.tips-section {
+  text-align: center;
+  margin: 40px 0;
+  background: #dcedc8;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  position: relative;
+  background: linear-gradient(135deg, #08a9fa, #cef606);
+  color: white;
+  padding: 60px 20px 20px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  overflow: hidden;
+}
+
+.footer-glow {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: radial-gradient(circle, rgba(129,199,132,0.5), transparent);
+  animation: glowMove 6s infinite alternate;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid rgba(255,255,255,0.3);
+  padding-top: 10px;
+}
+
+/* ---------- RESPONSIVE DESIGN ---------- */
+
+/* Laptops & Desktops */
+@media (max-width: 1200px) {
+  #sidebar { width: 220px; }
+  #main-content { margin-left: 230px; }
+  .hero { flex-direction: column; text-align: center; }
+  .hero-text { max-width: 100%; }
+  .hero-img img { width: 320px; margin-top: 20px; }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  #sidebar { left: -100%; transition: 0.4s; }
+  #sidebar.active { left: 0; }
+  #main-content { margin-left: 0; }
+  .hero { padding: 30px; }
+  .about-section { padding: 40px 5%; }
+  .herb-card { width: 160px; }
+  .quiz-section { padding: 30px; }
+}
+
+/* Mobiles Landscape */
+@media (max-width: 768px) {
+  body { flex-direction: column; }
+  #sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+  }
+  #main-content { margin-left: 0; padding: 15px; }
+  .hero { flex-direction: column; text-align: center; }
+  .hero-text h2 { font-size: 22px; }
+  .hero-img img { width: 250px; }
+  .blog-card { width: 90%; }
+  footer { border-radius: 0; }
+}
+
+/* Mobiles Portrait */
+@media (max-width: 576px) {
+  .hero { padding: 20px; }
+  .hero-text h2 { font-size: 20px; }
+  .about-section h2 { font-size: 1.8rem; }
+  .quiz-section { padding: 20px; }
+  .footer-container { flex-direction: column; align-items: center; }
+}
+
+/* Small Mobiles */
+@media (max-width: 400px) {
+  .hero-text h2 { font-size: 18px; }
+  .explore-btn { padding: 8px 15px; }
+  .herb-card { width: 90%; }
+  .blog-card { width: 100%; }
+}
+
+/* Ultra-wide 4K */
+@media (min-width: 1920px) {
+  #sidebar { width: 300px; }
+  #main-content { margin-left: 310px; }
+  .hero-text h2 { font-size: 40px; }
+  .hero-img img { width: 480px; }
+  .quiz-section { max-width: 1000px; }
+}
